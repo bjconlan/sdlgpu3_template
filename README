@@ -1,0 +1,5 @@
+A simple devcontainer template for using sdl3 with sdlgpu3 and imgui built with cmake.
+
+Use `cmake --build --preset debug` to build the imgui sdl3gpu demo.
+
+Currently only tested using `x86_64-linux-gnu`

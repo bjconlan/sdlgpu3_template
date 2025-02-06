@@ -1,0 +1,27 @@
+{
+	"name": "sdlgpu3_template",
+	"dockerFile": "Dockerfile",
+	"features": {
+	},
+	"mounts": [
+		"source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+		"source=/dev/dri,target=/dev/dri,type=bind,consistency=cached",
+		"source=${localEnv:XDG_RUNTIME_DIR},target=${localEnv:XDG_RUNTIME_DIR},type=bind,consistency=cached"
+	],
+	"containerEnv": {
+		"CPM_SOURCE_CACHE": "${containerWorkspaceFolder}/.cache/CPM"
+	},
+	"remoteEnv": {
+		"DISPLAY": "${localEnv:DISPLAY}",
+		"XAUTHORITY": "${localEnv:XAUTHORITY}"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-vscode.cmake-tools",
+				"ms-vscode.cpptools"
+			]
+		}
+	},
+	"runArgs": [ "--ipc=host" ]
+}
