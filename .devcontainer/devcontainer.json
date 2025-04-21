@@ -5,7 +5,6 @@
 	},
 	"mounts": [
 		"source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
-		"source=/dev/dri,target=/dev/dri,type=bind,consistency=cached",
 		"source=${localEnv:XDG_RUNTIME_DIR},target=${localEnv:XDG_RUNTIME_DIR},type=bind,consistency=cached"
 	],
 	"containerEnv": {
@@ -23,5 +22,5 @@
 			]
 		}
 	},
-	"runArgs": [ "--ipc=host" ]
+	"runArgs": [ "--ipc=host", "--device=/dev/dri" ]
 }

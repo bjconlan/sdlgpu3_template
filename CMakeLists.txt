@@ -4,18 +4,18 @@ project(sdlgpu3_template)
 include(cmake/get_cpm.cmake)
 
 CPMAddPackage("gh:TheLartians/Ccache.cmake@1.2.5")
-CPMAddPackage("gh:libsdl-org/SDL#release-3.2.2")
+CPMAddPackage("gh:libsdl-org/SDL#release-3.2.10")
 CPMAddPackage(
   NAME SDL_shadercross
   GITHUB_REPOSITORY libsdl-org/SDL_shadercross
-  GIT_TAG 7207bab784e18aebd734751d4de1b4c4d16aa88a
+  GIT_TAG 378f742d3023f6be7d9278908d0e47bf33fac361
   OPTIONS
     "SDLSHADERCROSS_VENDORED ON"
 )
 CPMAddPackage(
   NAME imgui
   GITHUB_REPOSITORY ocornut/imgui
-  VERSION 1.91.8-docking
+  VERSION 1.91.9-docking
   DOWNLOAD_ONLY YES
 )
 if(imgui_ADDED)
